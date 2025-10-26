@@ -24,8 +24,8 @@ stages:
     - task: AzureKeyVault@2
       displayName: "Retrieve SPN Credentials from Key Vault"
       inputs:
-        azureSubscription: "Azure-Terraform-Connection"
-        keyVaultName: "terraformSecretsforABB"
+        azureSubscription: "ABB-pipeline-spn"
+        keyVaultName: "SecretsforABB"
         secretsFilter: "spn-tenant-id,spn-client-id,spn-client-secret,subscription-id"
 
     - task: Bash@3
