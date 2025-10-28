@@ -115,7 +115,7 @@ stages:
   
         workingDirectory: '$(Build.SourcesDirectory)/infra'
         script: |
-          export ARM_CLIENT_ID='$(spn-client-id)'
+          export ARM_CLIENT_ID=$(spn-client-id)
           export ARM_CLIENT_SECRET=$(spn-client-secret)
           export ARM_TENANT_ID=$(spn-tenant-id)
           export ARM_SUBSCRIPTION_ID=$(subscription-id)
